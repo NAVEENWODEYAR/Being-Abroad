@@ -1,5 +1,6 @@
 package com.beingabroad.test.entity;
 
+import com.beingabroad.test.dto.InstitutionDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,4 +19,11 @@ public class Institution {
     private String location;
     private String contactNo;
     private String address;
+
+    public Institution(InstitutionDTO institutionDTO){
+        this.name=institutionDTO.getName();
+        this.location=institutionDTO.getLocation();
+        this.contactNo=institutionDTO.getContactNo();
+        this.address=institutionDTO.getAddress();
+    }
 }
