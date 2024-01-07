@@ -6,6 +6,8 @@ import com.beingabroad.test.repo.InstituteRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class InstitutionService {
 
@@ -32,5 +34,11 @@ public class InstitutionService {
                     institution.setLocation(institutionDTO.getLocation());
 
                     return iRepo.save(institution);
+    }
+
+    // find all the institutions available.,
+    public List<Institution> getInstitutions(){
+        List<Institution> list = iRepo.findAll();
+        return list;
     }
 }
