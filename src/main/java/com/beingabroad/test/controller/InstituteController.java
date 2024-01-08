@@ -34,8 +34,8 @@ public class InstituteController {
 
     // Update the institution by id.,
     @PutMapping("/upDate/{id}")
-    public Institution updateInstitute(@PathVariable Integer id){
-        return iService.updateInstitute(id);
+    public Institution updateInstitute(@PathVariable Integer id,InstitutionDTO institutionDTO){
+        return iService.updateInstitute(id,institutionDTO);
     }
 
 }
