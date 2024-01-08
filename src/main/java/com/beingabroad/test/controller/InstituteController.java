@@ -38,4 +38,11 @@ public class InstituteController {
         return iService.updateInstitute(id,institutionDTO);
     }
 
+    // delete institute by id,
+    @DeleteMapping("/deleteInstitute/{id}")
+    public String deleteInstitute(@PathVariable Integer id){
+        iService.deleteInstitute(id);
+        return "Institution with id " + id+" deleted successfully";
+    }
+
 }
