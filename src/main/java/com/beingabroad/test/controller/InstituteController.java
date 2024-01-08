@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/being")
+@RequestMapping("/being/abroad")
 public class InstituteController {
 
     @Autowired
