@@ -1,5 +1,7 @@
 package com.beingabroad.test.exception;
 
 public class InstitutionNotFoundException extends RuntimeException{
-    super(String msg);
+    public InstitutionNotFoundException(String msg){
+        super(msg);
+    }
 }
