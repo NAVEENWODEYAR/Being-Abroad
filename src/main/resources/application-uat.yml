@@ -12,9 +12,9 @@ spring:
     driverClassName: org.h2.Driver
   jpa:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-#    hibernate:
-#      ddl-auto: true
-#      generate-ddl: true
+    hibernate:
+      ddl-auto: true
+      generate-ddl: true
   security:
     user:
       name: being
