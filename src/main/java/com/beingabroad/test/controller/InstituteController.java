@@ -2,6 +2,7 @@ package com.beingabroad.test.controller;
 
 import com.beingabroad.test.dto.InstitutionDTO;
 import com.beingabroad.test.entity.Institution;
+import com.beingabroad.test.exception.InstitutionNotFoundException;
 import com.beingabroad.test.service.InstitutionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,6 +30,10 @@ public class InstituteController {
     // SELECT * FROM TABLE WHERE id=?,
     @GetMapping("/getInstitute/{id}")
     public Institution getInstitute(@PathVariable Integer id){
+
+        var institute = iService.getInstitute(id);
+        if(!(institute == null))
+           new InstitutionNotFoundException("Please provide the correct institute id");
         return iService.getInstitute(id);
     }
 
