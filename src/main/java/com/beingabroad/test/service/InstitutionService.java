@@ -41,4 +41,8 @@ public class InstitutionService {
         List<Institution> list = iRepo.findAll();
         return list;
     }
+
+    public void deleteInstitute(Integer id) {
+        iRepo.deleteById(id);
+    }
 }
