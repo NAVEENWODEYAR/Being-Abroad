@@ -8,7 +8,7 @@ public class BeingAbroadApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BeingAbroadApplication.class, args);
-		System.out.println("\n Submit before 12-01-2023");
+		System.out.println("\n**BEING-ABROAD***\n");
 	}
 
 }
