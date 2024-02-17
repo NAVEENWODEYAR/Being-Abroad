@@ -47,7 +47,7 @@ public class InstituteController {
     @DeleteMapping("/deleteInstitute/{id}")
     public String deleteInstitute(@PathVariable Integer id){
          iService.deleteInstitute(id);
-        return "Institution with id " + id+" deleted successfully";
+        return "Institution with id " + id+" deleted successfully from databse";
     }
 
 }
